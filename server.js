@@ -9,7 +9,7 @@
 //         "Save-Data": "on",
 //     },
 //     "referrer": "http://app.sonke.co.za/",
-//     "body": "{\"content\":\"Sonke: Betway FREE Credit Reminder: Register at https://www.betway.co.za/?btag=P73370-PR22258-CM55263-TS1923988/&SignUpCode=d4u2551 to receive your R30 Betway gaming Voucher. For queries contact sonke@tlcrewards.com Ts&Cs apply.\",\"to\":\"27736076544\"}",
+//     "body": "more stuff here",
 //     "method": "POST",
 //     "mode": "cors"
 // });
