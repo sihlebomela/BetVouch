@@ -26,3 +26,5 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
 // Parse JSON bodies (as sent by API clients)
 app.use(express.json());
+
+app.use(express.static('public')); 
