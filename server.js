@@ -19,6 +19,7 @@
  
 const express = require('express');
 const app = express();
+const axios = require('axios');
 const port = process.env.PORT || 3000 
 
 require('dotenv').config();
@@ -42,10 +43,31 @@ app.post('/send', (req, res) => {
     const telRegex = '^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$'
     
     if (tel.match(telRegex) && tel.length === 10) {
-        return res.json('valid_number');
+       
+        // issuing betway affiliate link
+        makePostRequest(process.env.BETWAY_API_URL, tel, {
+            "CellNumber": tel,
+            "SonkeUserID": process.env.SONKEID
+        })
+        .then(data => { 
+            const AffiliateLink = data.AffiliateLink;
+            // todo: send sms to tel with affiliate link
+
+        }).catch((err) => {
+            res.json('unkown error occured');
+        })
+        
+        return res.json('success');
     } 
 
-    res.json('invalid_number')
+    res.json('Phone number is invalid')
 })
 
 app.listen(port, console.log(`listening on localhost:${port}`));
+
+async function makePostRequest(url, tel, payload) {
+    let res = await axios.post(url, payload);
+
+    let data = res.data;
+    return data
+}
