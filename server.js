@@ -34,4 +34,18 @@ app.use(express.static('public'));
 
 app.get('/', (req, res) => { res.render('index') });
 
+app.post('/send', (req, res) => {
+  
+    tel = req.body.tel;
+  
+    // validate tel number
+    const telRegex = '^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$'
+    
+    if (tel.match(telRegex) && tel.length === 10) {
+        return res.json('valid_number');
+    } 
+
+    res.json('invalid_number')
+})
+
 app.listen(port, console.log(`listening on localhost:${port}`));
