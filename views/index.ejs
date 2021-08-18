@@ -9,8 +9,9 @@
 </head>
 <body>
     <h1>BetVouch</h1>
-    <form action="/send" method="post">
-        <input type="tel" name="tel" id="tel" required>
+    <form action="/send" method="post" spellcheck="false">
+        <input type="tel" name="tel" id="tel" minlength="10" maxlength="10" required>
+        <input type="submit" value="Go">
     </form>
 
     <script src="scripts/app.js"></script>
