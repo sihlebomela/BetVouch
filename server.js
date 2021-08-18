@@ -41,31 +41,41 @@ app.post('/send', (req, res) => {
   
     // validate tel number
     const telRegex = '^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$'
-    
+
     if (tel.match(telRegex) && tel.length === 10) {
-       
-        // issuing betway affiliate link
-        makePostRequest(process.env.BETWAY_API_URL, tel, {
-            "CellNumber": tel,
-            "SonkeUserID": process.env.SONKEID
-        })
-        .then(data => { 
-            const AffiliateLink = data.AffiliateLink;
-            // todo: send sms to tel with affiliate link
+        try {
+            // issuing betway affiliate link
+            makePostRequest(process.env.BETWAY_API_URL, {
+                "CellNumber": tel,
+                "SonkeUserID": process.env.SONKEID
+            })
+            .then(data => { 
+                const AffiliateLink = data.AffiliateLink;
+                const message = `BetVouch: Betway FREE Credit: Register at ${AffiliateLink} to receive your R30 Betway gaming Voucher. For queries contact sonke@tlcrewards.com Ts&Cs apply.`;
+                
+                //! send sms to number with affiliate link
 
-        }).catch((err) => {
-            res.json('unkown error occured');
-        })
+                // convert tel to string and and remove zero at beginning and parse to integer
+                tel = parseInt('27' + tel.toString().substr(1));// now we have tel in RSA country code format
+                
+                makePostRequest(process.env.SMS_API_URL, {"content": message, "to" : tel,}).then(data => {
+                    return res.json({message: 'Successful, check SMS on your phone with the sign up link', smsSent: data.messages[0].accepted });
+                })
+
+            }).catch((err) => {
+                console.log('unkown error occured', err);
+                throw(new Error(err)) // throw error
+            })
+        } catch {
+            return res.json({message: 'Something went wrong, please check your internet connection or try again later'})
+        }
         
-        return res.json('success');
     } 
-
-    res.json('Phone number is invalid')
 })
 
 app.listen(port, console.log(`listening on localhost:${port}`));
 
-async function makePostRequest(url, tel, payload) {
+async function makePostRequest(url, payload) {
     let res = await axios.post(url, payload);
 
     let data = res.data;
