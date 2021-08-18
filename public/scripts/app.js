@@ -1,3 +1,16 @@
+const numberForm = document.querySelector('form');
+
+// Avoid redirecting
+numberForm.addEventListener('submit', (ev) => {
+    ev.preventDefault();
+
+    // send a post request
+    sendRequest(numberForm, '/send')
+        .then(res => {
+            console.log(res);
+        })
+})
+
 async function sendRequest(formElem, route) {
     const data = new URLSearchParams(new FormData(formElem));
 
