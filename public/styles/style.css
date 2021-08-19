@@ -11,6 +11,12 @@
   }
 }
 
+@media (max-width: 365px) {
+  form {
+    width: 90% !important;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
