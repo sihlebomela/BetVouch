@@ -8,6 +8,7 @@ $baby-red: #ED254E;
 $orange-yellow: #F7B32B;
 $powder-white: #FFFFFC;
 $font-stack-serif: 'Montserrat', sans-serif;
+$form-input-radius: 6px;
 
 * {
     padding: 0;
@@ -37,4 +38,18 @@ html, body {
     gap: 10px;
     color: $powder-white;
     text-align: center;
+}
+
+form {
+    * {outline: none;}
+    @include flexCenter;
+    flex-direction: column;
+    gap: 1rem;
+
+    input[type="tel"] {
+        border: 3px solid transparent;
+        width: 100%;
+        padding: 8px;
+        border-radius: $form-input-radius;
+    }
 }
