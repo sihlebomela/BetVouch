@@ -10,6 +10,7 @@ $powder-white: #FFFFFC;
 $font-stack-serif: 'Montserrat', sans-serif;
 $form-input-radius: 6px;
 $submit-btn-height: 45px;
+$title-n-form-gap: 4rem;
 
 @media (min-width: 480px) {
     form {
@@ -39,7 +40,7 @@ html, body {
     height: 100%;
     font-family: $font-stack-serif;
     flex-direction: column;
-    gap: 2rem;
+    gap: $title-n-form-gap;
 }
 
 .main-text {
@@ -60,7 +61,7 @@ form {
     input[type="tel"] {
         border: 3px solid transparent;
         width: 100%;
-        padding: 8px;
+        padding: 10px;
         border-radius: $form-input-radius;
     }
 
