@@ -73,4 +73,15 @@ form input[type="tel"] {
   padding: 8px;
   border-radius: 6px;
 }
+
+form .submit-btn {
+  cursor: pointer;
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-radius: 6px;
+  color: #FFFFFC;
+  font-weight: 600;
+  background-color: #4ECB71;
+}
 /*# sourceMappingURL=style.css.map */

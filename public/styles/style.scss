@@ -9,6 +9,7 @@ $orange-yellow: #F7B32B;
 $powder-white: #FFFFFC;
 $font-stack-serif: 'Montserrat', sans-serif;
 $form-input-radius: 6px;
+$submit-btn-height: 45px;
 
 * {
     padding: 0;
@@ -51,5 +52,16 @@ form {
         width: 100%;
         padding: 8px;
         border-radius: $form-input-radius;
+    }
+
+    .submit-btn {
+        cursor: pointer;
+        width: 100%;
+        height: $submit-btn-height;
+        border: none;
+        border-radius: $form-input-radius;
+        color: $powder-white;
+        font-weight: 600;
+        background-color: $light-green;
     }
 }
