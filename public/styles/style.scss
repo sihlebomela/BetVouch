@@ -75,6 +75,8 @@ form {
         width: 100%;
         padding: 10px;
         border-radius: $form-input-radius;
+        font-family: $font-stack-serif;
+        font-weight: 800;
     }
 
     .submit-btn {
