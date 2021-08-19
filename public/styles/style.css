@@ -12,6 +12,13 @@
   form .submit-btn {
     width: 150px !important;
   }
+  footer {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    font-size: medium !important;
+  }
 }
 
 @media (max-width: 365px) {

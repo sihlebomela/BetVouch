@@ -25,6 +25,11 @@ $title-n-form-gap: 4rem;
             width: 150px !important;
         }
     }
+
+    footer {
+        flex-direction: row !important;
+        font-size: medium !important;
+    }
 }
 
 @media (max-width: 365px) {
