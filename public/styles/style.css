@@ -56,6 +56,22 @@ body {
   gap: 4rem;
 }
 
+.toggle-theme {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1rem 3rem;
+}
+
+.toggle-theme img {
+  width: 45px;
+}
+
+.toggle-theme .light {
+  display: none;
+}
+
 .main-text {
   display: -webkit-box;
   display: -ms-flexbox;
