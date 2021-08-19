@@ -61,19 +61,19 @@ body {
     gap: $title-n-form-gap;
 }
 
-.toggle-theme {
+.theme-toggler {
     cursor: pointer;
     position: absolute;
     top: 0;
     right: 0;
     margin: 1rem 3rem;
+    
+    .light {
+        display: none;
+    }
 
     img {
         width: 45px;
-    }
-
-    .light {
-        display: none;
     }
 }
 
@@ -132,4 +132,30 @@ footer {
     .twitter-link {
         color: $baby-blue;
     }
+}
+
+body.light {
+    background: $powder-white;
+
+    .light {
+        display: block;
+    }
+
+    .dark {
+        display: none;
+    }
+
+    .main-text {
+        color: black;
+    }
+
+    form input[type="tel"] {
+        background-color: $powder-white;
+        border-color: black;
+    }
+
+    footer {
+        color: black;
+    }
+        
 }

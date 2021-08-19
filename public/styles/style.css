@@ -56,7 +56,7 @@ body {
   gap: 4rem;
 }
 
-.toggle-theme {
+.theme-toggler {
   cursor: pointer;
   position: absolute;
   top: 0;
@@ -64,12 +64,12 @@ body {
   margin: 1rem 3rem;
 }
 
-.toggle-theme img {
-  width: 45px;
+.theme-toggler .light {
+  display: none;
 }
 
-.toggle-theme .light {
-  display: none;
+.theme-toggler img {
+  width: 45px;
 }
 
 .main-text {
@@ -162,5 +162,30 @@ footer {
 
 footer .twitter-link {
   color: #0abaff;
+}
+
+body.light {
+  background: #FFFFFC;
+}
+
+body.light .light {
+  display: block;
+}
+
+body.light .dark {
+  display: none;
+}
+
+body.light .main-text {
+  color: black;
+}
+
+body.light form input[type="tel"] {
+  background-color: #FFFFFC;
+  border-color: black;
+}
+
+body.light footer {
+  color: black;
 }
 /*# sourceMappingURL=style.css.map */
