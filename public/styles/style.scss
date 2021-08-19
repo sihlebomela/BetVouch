@@ -52,6 +52,7 @@ $title-n-form-gap: 4rem;
 
 html,
 body {
+    transition: 150ms cubic-bezier(0.165, 0.84, 0.44, 1);
     @include flexCenter;
     background-color: $desaturated-purple;
     width: 100%;
@@ -96,6 +97,7 @@ form {
     gap: 1rem;
 
     input[type="tel"] {
+        transition: 150ms cubic-bezier(0.165, 0.84, 0.44, 1);
         border: 3px solid transparent;
         width: 100%;
         padding: 10px;
