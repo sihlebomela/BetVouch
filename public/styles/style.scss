@@ -30,3 +30,11 @@ html, body {
     flex-direction: column;
     gap: 2rem;
 }
+
+.main-text {
+    @include flexCenter;
+    flex-direction: column;
+    gap: 10px;
+    color: $powder-white;
+    text-align: center;
+}
