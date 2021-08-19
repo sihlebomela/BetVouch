@@ -2,7 +2,7 @@
 
 // COLORS
 $desaturated-purple: #2B2D42;
-$baby-blue: #2F97C1;
+$baby-blue: #0abaff;
 $light-green: #4ECB71;
 $baby-red: #ED254E;
 $orange-yellow: #F7B32B;
@@ -93,5 +93,22 @@ form {
         color: $powder-white;
         font-weight: 600;
         background-color: $light-green;
+    }
+}
+
+footer {
+    @include flexCenter;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 95%;
+    position: absolute;
+    bottom: 1rem;
+    font-weight: 800;
+    color: white;
+    font-size: small;
+
+    .twitter-link {
+        color: $baby-blue;
     }
 }
