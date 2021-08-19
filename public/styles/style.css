@@ -24,7 +24,8 @@
           box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
