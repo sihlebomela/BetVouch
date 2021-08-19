@@ -11,6 +11,15 @@ $font-stack-serif: 'Montserrat', sans-serif;
 $form-input-radius: 6px;
 $submit-btn-height: 45px;
 
+@media (min-width: 480px) {
+    form {
+        flex-direction: row !important;
+        .submit-btn {
+            width: 150px !important;
+        }
+    }
+}
+
 * {
     padding: 0;
     margin: 0;
