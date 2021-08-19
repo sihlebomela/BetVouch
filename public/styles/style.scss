@@ -17,6 +17,10 @@ $title-n-form-gap: 4rem;
     form {
         flex-direction: row !important;
 
+        input[type="tel"] {
+            text-align: left !important;
+        }
+
         .submit-btn {
             width: 150px !important;
         }
@@ -77,6 +81,7 @@ form {
         border-radius: $form-input-radius;
         font-family: $font-stack-serif;
         font-weight: 800;
+        text-align: center;
     }
 
     .submit-btn {
