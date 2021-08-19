@@ -26,3 +26,10 @@ async function sendRequest(formElem, route) {
     let json = await response.json();
     return json;
 }
+
+//Toggle Theme Feature
+let themeButton = document.querySelector('.theme-toggler');
+
+themeButton.addEventListener('click', () => {
+    document.body.classList.toggle('light');
+})
