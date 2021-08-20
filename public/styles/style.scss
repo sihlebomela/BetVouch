@@ -129,7 +129,8 @@ form {
             color: $powder-white;
         }
 
-        .icon, .message {
+        .icon,
+        .message {
             transition: 150ms cubic-bezier(0.165, 0.84, 0.44, 1);
             position: absolute;
             @include hide;
@@ -148,7 +149,8 @@ form {
         background-color: $light-green;
     }
 
-    .submit-btn:disabled, input[type="tel"]:read-only {
+    .submit-btn:disabled,
+    input[type="tel"]:read-only {
         cursor: not-allowed;
         opacity: 0.5;
     }
@@ -187,7 +189,9 @@ body.light {
         border-color: black;
     }
 
-    .main-text, .message, footer {
+    .main-text,
+    .message,
+    footer {
         color: black;
     }
 
@@ -217,7 +221,8 @@ form.success {
     }
 
     // hide input and loader
-    .loader, input[type="tel"] {
+    .loader,
+    input[type="tel"] {
         @include hide;
         padding: 0;
     }
