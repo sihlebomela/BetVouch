@@ -27,7 +27,7 @@ app.post('/send', (req, res) => {
     tel = req.body.tel;
 
     // validate tel number
-    const telRegex = '^[0][0-9]{9}$'
+    const telRegex = '^[0][6-8][0-9]{8}$'
 
     if (tel.match(telRegex) && tel.length === 10) {
         try {
