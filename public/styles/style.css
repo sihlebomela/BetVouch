@@ -138,7 +138,7 @@ form .loader {
           animation: load 2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards infinite;
 }
 
-form .responses-wrapper {
+form .message-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -155,11 +155,11 @@ form .responses-wrapper {
   gap: 1rem;
 }
 
-form .responses-wrapper .message {
+form .message-wrapper .message {
   color: #FFFFFC;
 }
 
-form .responses-wrapper .icon, form .responses-wrapper .message {
+form .message-wrapper .icon, form .message-wrapper .message {
   -webkit-transition: 150ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: 150ms cubic-bezier(0.165, 0.84, 0.44, 1);
   position: absolute;

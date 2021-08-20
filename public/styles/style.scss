@@ -120,7 +120,7 @@ form {
         animation: load 2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards infinite;
     }
 
-    .responses-wrapper {
+    .message-wrapper {
         @include flexCenter;
         flex-direction: column;
         gap: 1rem;
