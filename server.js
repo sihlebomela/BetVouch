@@ -49,9 +49,10 @@ app.post('/send', (req, res) => {
                         "content": message,
                         "to": tel,
                     }).then(data => {
-                        return res.json({
+                        return res.status(200).json({
                             message: 'Successful, check SMS on your phone with the sign up link',
-                            smsSent: data.messages[0].accepted
+                            smsSent: data.messages[0].accepted,
+                            status: 200
                         });
                     })
 
