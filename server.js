@@ -4,8 +4,6 @@ const app = express();
 const axios = require('axios');
 const port = process.env.PORT || 3000
 
-require('dotenv').config();
-
 app.set('view engine', 'ejs');
 
 // Parse URL-encoded bodies (as sent by HTML forms)
