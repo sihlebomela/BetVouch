@@ -40,13 +40,13 @@ function inputError(color) {
 
 function isValid() {
     const numberPattern = '[0][0-9]{9}';
-    let number = document.querySelector('#tel').value
-    console.log(number)
+    const telInput = document.querySelector('#tel');
+    let number = telInput.value
     if (number.match(numberPattern) != null && number.length === 10) {
-        document.querySelector('#tel').style.borderColor = "#4ECB71";
+        telInput.style.borderColor = "#4ECB71";
         document.querySelector('.submit-btn').removeAttribute('disabled');
     } else {
-        document.querySelector('#tel').style.borderColor = "black";
+        telInput.style.borderColor = "black";
         document.querySelector('.submit-btn').setAttribute('disabled', '');
     }
 }
