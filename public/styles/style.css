@@ -63,7 +63,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 4rem;
+  gap: 10rem;
 }
 
 .theme-toggler {
@@ -80,6 +80,23 @@ body {
 
 .theme-toggler img {
   width: 45px;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
 }
 
 .main-text {
@@ -233,7 +250,6 @@ form input[type="tel"]:read-only {
 }
 
 footer {
-  margin-top: 35%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
