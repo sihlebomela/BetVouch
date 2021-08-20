@@ -27,7 +27,7 @@ app.post('/send', (req, res) => {
     tel = req.body.tel;
 
     // validate tel number
-    const telRegex = '^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$'
+    const telRegex = '^[0][0-9]{9}$'
 
     if (tel.match(telRegex) && tel.length === 10) {
         try {
@@ -60,11 +60,17 @@ app.post('/send', (req, res) => {
                     throw (new Error(err)) // throw error
                 })
         } catch {
-            return res.json({
-                message: 'Something went wrong, please check your internet connection or try again later'
+            return res.status(520).json({
+                message: 'Something went wrong, please check your internet connection or try again later',
+                status: 520
             })
         }
 
+    } else {
+        return res.status(449).json({
+            message: 'Hmmm, This Phone Number is Invalid',
+            status: 449
+        })
     }
 })
 
