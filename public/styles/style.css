@@ -138,6 +138,11 @@ form .submit-btn {
   background-color: #4ECB71;
 }
 
+form .submit-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
