@@ -18,7 +18,7 @@ numberForm.addEventListener('submit', (ev) => {
             if(res.status === 200) {
                 // successful, display message
                 numberForm.classList.add('success');             
-                messageElem.innerText = res.message;
+                messageElem.innerHTML = res.message;
 
             } else if (res.status === 449) {
                 // number is invalid

@@ -148,7 +148,10 @@ form {
 
         .message {
             color: $powder-white;
+            @include flexCenter;
             @include alignCenter;
+            flex-direction: column;
+            gap: 1rem;
         }
 
         .icon,

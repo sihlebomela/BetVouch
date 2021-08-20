@@ -50,7 +50,7 @@ app.post('/send', (req, res) => {
                         "to": tel,
                     }).then(data => {
                         return res.status(200).json({
-                            message: 'Successful, check SMS on your phone with the sign up link',
+                            message: 'Perfect, We sent an SMS with the sign up link, Enjoy!<img src="https://cdn-0.emojis.wiki/emoji-pics/apple/grinning-face-with-smiling-eyes-apple.png" width="25px">',
                             smsSent: data.messages[0].accepted,
                             status: 200
                         });
@@ -69,7 +69,7 @@ app.post('/send', (req, res) => {
 
     } else {
         return res.status(449).json({
-            message: 'Hmmm, This Phone Number is Invalid',
+            message: 'Phone Number is invalid',
             status: 449
         })
     }
