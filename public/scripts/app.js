@@ -23,7 +23,10 @@ numberForm.addEventListener('submit', (ev) => {
             } else if (res.status === 449) {
                 // number is invalid
                 backToDefault();
+                const errorElem = document.querySelector('.input-error');
+                errorElem.innerText = res.message;
                 inputError('#ED254E');
+                isValid();
             } else {
                 // an error occured, display error
             }
