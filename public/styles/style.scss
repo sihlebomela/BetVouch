@@ -168,9 +168,7 @@ body.light {
 
 }
 
-form.process {
-    input[type="tel"], .submit-btn {
-        width: 0;
-        scale: 0;
-    }
+form.process .submit-btn {
+    width: 0;
+    scale: 0;
 }

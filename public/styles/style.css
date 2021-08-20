@@ -200,7 +200,7 @@ body.light footer {
   color: black;
 }
 
-form.process input[type="tel"], form.process .submit-btn {
+form.process .submit-btn {
   width: 0;
   scale: 0;
 }
