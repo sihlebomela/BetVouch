@@ -119,7 +119,7 @@ form {
         background-color: $light-green;
     }
 
-    .submit-btn:disabled {
+    .submit-btn:disabled, input[type="tel"]:disabled {
         cursor: not-allowed;
         opacity: 0.5;
     }

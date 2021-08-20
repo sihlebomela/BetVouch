@@ -140,7 +140,7 @@ form .submit-btn {
   background-color: #4ECB71;
 }
 
-form .submit-btn:disabled {
+form .submit-btn:disabled, form input[type="tel"]:disabled {
   cursor: not-allowed;
   opacity: 0.5;
 }
