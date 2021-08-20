@@ -11,7 +11,19 @@ numberForm.addEventListener('submit', (ev) => {
     sendRequest(numberForm, '/send')
         .then(res => {
             console.log(res);
-            backToDefault();
+            console.log(res.status)
+
+            // show different visuals depending on response
+            if(res.status === 200) {
+                // successful, display message
+
+            } else if (res.status === 449) {
+                // number is invalid
+                backToDefault();
+                inputError('#ED254E');
+            } else {
+                // an error occured, display error
+            }
         })
 })
 
