@@ -4,10 +4,14 @@ const numberForm = document.querySelector('form');
 numberForm.addEventListener('submit', (ev) => {
     ev.preventDefault();
 
+    // process input
+    process();
+
     // send a post request
     sendRequest(numberForm, '/send')
         .then(res => {
             console.log(res);
+            backToDefault();
         })
 })
 
@@ -39,7 +43,7 @@ function inputError(color) {
 }
 
 function isValid() {
-    const numberPattern = '[0][0-9]{9}';
+    const numberPattern = '[0][6-8][0-9]{8}';
     const telInput = document.querySelector('#tel');
     const submitBtn = document.querySelector('.submit-btn');
     
@@ -48,10 +52,25 @@ function isValid() {
     if (number.match(numberPattern) != null && number.length === 10) {
         telInput.style.borderColor = "#4ECB71";
         submitBtn.removeAttribute('disabled');
-    } else {
-        telInput.style.borderColor = "black";
+    } else if (number.length === 10) {
+        telInput.style.borderColor = "#ED254E";
         submitBtn.setAttribute('disabled', '');
+    } else {
+        submitBtn.setAttribute('disabled', '');
+        telInput.style.borderColor = "black";
     }
+}
+
+function process() {
+    numberForm.classList.add('process');
+    const telInput = document.querySelector('#tel');
+    telInput.setAttribute('readonly', ''); // disable input
+}
+
+function backToDefault() {
+    numberForm.classList.remove('process');
+    const telInput = document.querySelector('#tel');
+    telInput.removeAttribute('readonly', ''); // enable input
 }
 
 isValid(); // call just-in-case the input was already filled
