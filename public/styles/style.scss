@@ -35,6 +35,10 @@ $title-n-form-gap: 4rem;
 @media (max-width: 365px) {
     form {
         width: 90% !important;
+        
+        .icon {
+            max-width: 120px !important;
+        }
     }
 }
 
@@ -140,6 +144,11 @@ form {
             position: absolute;
             @include hide;
         }
+
+        .icon {
+            width: 100%;
+            max-width: 200px;
+        }
     }
 
     .submit-btn {
@@ -220,7 +229,6 @@ form.success {
     // show sms icon
     .sms-icon {
         scale: 1;
-        width: 200px;
         position: static;
         display: block;
     }
