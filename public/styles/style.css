@@ -157,6 +157,8 @@ form .message-wrapper {
 
 form .message-wrapper .message {
   color: #FFFFFC;
+  text-align: center;
+  margin: 0 1rem;
 }
 
 form .message-wrapper .icon,
