@@ -197,4 +197,9 @@ body.light form input[type="tel"] {
 body.light footer {
   color: black;
 }
+
+input[type="tel"].process {
+  width: 0;
+  scale: 0;
+}
 /*# sourceMappingURL=style.css.map */
