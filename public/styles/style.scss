@@ -124,6 +124,11 @@ form {
         @include flexCenter;
         flex-direction: column;
         gap: 1rem;
+
+        .message {
+            color: $powder-white;
+        }
+
         .icon, .message {
             transition: 150ms cubic-bezier(0.165, 0.84, 0.44, 1);
             position: absolute;
@@ -177,16 +182,12 @@ body.light {
         display: none;
     }
 
-    .main-text {
-        color: black;
-    }
-
     form input[type="tel"] {
         background-color: $powder-white;
         border-color: black;
     }
 
-    footer {
+    .main-text, .message, footer {
         color: black;
     }
 
