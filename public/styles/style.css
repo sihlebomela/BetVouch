@@ -251,7 +251,7 @@ footer {
           flex-direction: column;
   gap: 1.5rem;
   width: 95%;
-  position: fixed;
+  position: absolute;
   bottom: 1rem;
   font-weight: 800;
   color: white;
