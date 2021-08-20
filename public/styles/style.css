@@ -150,6 +150,7 @@ form .loader {
           transform: rotate(0deg);
   width: 0;
   scale: 0;
+  display: none 1s;
   -webkit-animation: load 2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards infinite;
           animation: load 2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards infinite;
 }
@@ -198,6 +199,7 @@ form .message-wrapper .message {
   position: absolute;
   width: 0;
   scale: 0;
+  display: none 1s;
 }
 
 form .message-wrapper .icon {
@@ -286,6 +288,7 @@ body.light footer {
 form.process .submit-btn {
   width: 0 !important;
   scale: 0;
+  display: none 1s;
 }
 
 form.process .loader {
@@ -307,6 +310,7 @@ form.success .loader,
 form.success input[type="tel"] {
   width: 0;
   scale: 0;
+  display: none 1s;
   padding: 0;
 }
 
@@ -330,6 +334,7 @@ form.failed .loader,
 form.failed input[type="tel"] {
   width: 0;
   scale: 0;
+  display: none 1s;
   padding: 0;
 }
 

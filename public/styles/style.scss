@@ -64,6 +64,7 @@ $title-n-form-gap: 4rem;
 @mixin hide {
     width: 0;
     scale: 0;
+    display: none 1s;
 }
 
 @mixin alignCenter {
@@ -231,6 +232,7 @@ form.process {
     .submit-btn {
         width: 0 !important;
         scale: 0;
+        display: none 1s;
     }
 
     .loader {
