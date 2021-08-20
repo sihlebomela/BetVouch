@@ -33,3 +33,18 @@ let themeButton = document.querySelector('.theme-toggler');
 themeButton.addEventListener('click', () => {
     document.body.classList.toggle('light');
 })
+
+function inputError(color) {
+    document.querySelector('#tel').style.borderColor = color;
+}
+
+function isValid() {
+    const numberPattern = '[0][0-9]{9}';
+    let number = document.querySelector('#tel').value
+    console.log(number)
+    if (number.match(numberPattern) != null && number.length === 10) {
+        document.querySelector('#tel').style.borderColor = "#4ECB71";
+    } else {
+        document.querySelector('#tel').style.borderColor = "black";
+    }
+}
