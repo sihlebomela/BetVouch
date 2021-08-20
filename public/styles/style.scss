@@ -50,6 +50,12 @@ $title-n-form-gap: 4rem;
     justify-content: center;
 }
 
+// for hiding elements
+@mixin hide {
+    width: 0;
+    scale: 0;
+}
+
 html,
 body {
     transition: 150ms cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -110,9 +116,19 @@ form {
     .loader {
         transition: 150ms cubic-bezier(0.165, 0.84, 0.44, 1);
         transform: rotate(0deg);
-        scale: 0;
-        width: 0;
+        @include hide;
         animation: load 2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards infinite;
+    }
+
+    .responses-wrapper {
+        @include flexCenter;
+        flex-direction: column;
+        gap: 1rem;
+        .icon, .message {
+            transition: 150ms cubic-bezier(0.165, 0.84, 0.44, 1);
+            position: absolute;
+            @include hide;
+        }
     }
 
     .submit-btn {
@@ -183,6 +199,30 @@ form.process {
     }
 
     .loader {
+        width: auto;
+        scale: 1;
+    }
+}
+
+form.success {
+    gap: 0 !important;
+
+    // show sms icon
+    .sms-icon {
+        scale: 1;
+        width: 200px;
+        position: static;
+        display: block;
+    }
+
+    // hide input and loader
+    .loader, input[type="tel"] {
+        @include hide;
+        padding: 0;
+    }
+
+    .message {
+        position: static;
         width: auto;
         scale: 1;
     }
