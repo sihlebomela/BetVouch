@@ -15,9 +15,9 @@ numberForm.addEventListener('submit', (ev) => {
             const messageElem = document.querySelector('.message');
 
             // show different visuals depending on response
-            if(res.status === 200) {
+            if (res.status === 200) {
                 // successful, display message
-                numberForm.classList.add('success');             
+                numberForm.classList.add('success');
                 messageElem.innerHTML = res.message;
 
             } else if (res.status === 449) {
@@ -29,7 +29,7 @@ numberForm.addEventListener('submit', (ev) => {
                 isValid();
             } else {
                 // an error occured, display error
-                numberForm.classList.add('failed');             
+                numberForm.classList.add('failed');
                 messageElem.innerText = res.message;
             }
         })
@@ -66,9 +66,9 @@ function isValid() {
     const numberPattern = '[0][6-8][0-9]{8}';
     const telInput = document.querySelector('#tel');
     const submitBtn = document.querySelector('.submit-btn');
-    
+
     let number = telInput.value;
-    
+
     if (number.match(numberPattern) != null && number.length === 10) {
         telInput.style.borderColor = "#4ECB71";
         submitBtn.removeAttribute('disabled');
