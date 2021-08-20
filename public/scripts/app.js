@@ -41,13 +41,16 @@ function inputError(color) {
 function isValid() {
     const numberPattern = '[0][0-9]{9}';
     const telInput = document.querySelector('#tel');
-    let number = telInput.value
+    const submitBtn = document.querySelector('.submit-btn');
+    
+    let number = telInput.value;
+    
     if (number.match(numberPattern) != null && number.length === 10) {
         telInput.style.borderColor = "#4ECB71";
-        document.querySelector('.submit-btn').removeAttribute('disabled');
+        submitBtn.removeAttribute('disabled');
     } else {
         telInput.style.borderColor = "black";
-        document.querySelector('.submit-btn').setAttribute('disabled', '');
+        submitBtn.setAttribute('disabled', '');
     }
 }
 
