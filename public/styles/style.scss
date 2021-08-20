@@ -63,8 +63,7 @@ $title-n-form-gap: 4rem;
 // for hiding elements
 @mixin hide {
     width: 0;
-    scale: 0;
-    display: none 1s;
+    transform: scale(0);
 }
 
 @mixin alignCenter {
@@ -231,13 +230,12 @@ body.light {
 form.process {
     .submit-btn {
         width: 0 !important;
-        scale: 0;
-        display: none 1s;
+        transform: scale(0);
     }
 
     .loader {
         width: auto;
-        scale: 1;
+        transform: scale(1);
     }
 }
 
@@ -246,7 +244,7 @@ form.success {
 
     // show sms icon
     .sms-icon {
-        scale: 1;
+        transform: scale(1);
         position: static;
         display: block;
     }
@@ -261,7 +259,7 @@ form.success {
     .message {
         position: static;
         width: auto;
-        scale: 1;
+        transform: scale(1);
     }
 }
 
@@ -270,7 +268,7 @@ form.failed {
 
     // show sms icon
     .error-icon {
-        scale: 1;
+        transform: scale(1);
         position: static;
         display: block;
     }
@@ -285,7 +283,7 @@ form.failed {
     .message {
         position: static;
         width: auto;
-        scale: 1;
+        transform: scale(1);
     }
 }
 
