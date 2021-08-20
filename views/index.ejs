@@ -14,7 +14,7 @@
 
 </head>
 
-<body>
+<body class="light">
     <div class="theme-toggler">
         <img src="/assets/moon.svg" alt="a vector graphic moon" class="dark">
         <img src="/assets/sun.svg" alt="a vector graphic sun" class="light">
@@ -26,7 +26,7 @@
     </div>
 
     <form action="/send" method="post" spellcheck="false">
-        <input type="tel" name="tel" id="tel" minlength="10" maxlength="10" pattern="[0][0-9]{9}" placeholder="Your Phone Number" oninvalid="invalidNumber();" required>
+        <input type="tel" name="tel" id="tel" minlength="10" maxlength="10" pattern="[0][0-9]{9}" placeholder="Your Phone Number" oninvalid="inputError('#ED254E');" oninput="isValid()" required>
         <input type="submit" class="submit-btn" value="Go">
     </form>
 
