@@ -12,12 +12,12 @@ numberForm.addEventListener('submit', (ev) => {
         .then(res => {
             console.log(res);
             console.log(res.status)
+            const messageElem = document.querySelector('.message');
 
             // show different visuals depending on response
             if(res.status === 200) {
                 // successful, display message
                 numberForm.classList.add('success');             
-                const messageElem = document.querySelector('.message');
                 messageElem.innerText = res.message;
 
             } else if (res.status === 449) {
@@ -29,6 +29,8 @@ numberForm.addEventListener('submit', (ev) => {
                 isValid();
             } else {
                 // an error occured, display error
+                numberForm.classList.add('failed');             
+                messageElem.innerText = res.message;
             }
         })
 })

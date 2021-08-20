@@ -254,6 +254,30 @@ form.success {
     }
 }
 
+form.failed {
+    gap: 0 !important;
+
+    // show sms icon
+    .error-icon {
+        scale: 1;
+        position: static;
+        display: block;
+    }
+
+    // hide input and loader
+    .loader,
+    input[type="tel"] {
+        @include hide;
+        padding: 0;
+    }
+
+    .message {
+        position: static;
+        width: auto;
+        scale: 1;
+    }
+}
+
 @keyframes load {
     0% {
         transform: rotate(0deg);

@@ -297,6 +297,29 @@ form.success .message {
   scale: 1;
 }
 
+form.failed {
+  gap: 0 !important;
+}
+
+form.failed .error-icon {
+  scale: 1;
+  position: static;
+  display: block;
+}
+
+form.failed .loader,
+form.failed input[type="tel"] {
+  width: 0;
+  scale: 0;
+  padding: 0;
+}
+
+form.failed .message {
+  position: static;
+  width: auto;
+  scale: 1;
+}
+
 @-webkit-keyframes load {
   0% {
     -webkit-transform: rotate(0deg);
