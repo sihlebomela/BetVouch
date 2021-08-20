@@ -108,6 +108,7 @@ form {
     }
 
     .submit-btn {
+        transition: 150ms cubic-bezier(0.165, 0.84, 0.44, 1);
         cursor: pointer;
         width: 100%;
         height: $submit-btn-height;
