@@ -22,6 +22,11 @@
 }
 
 @media (max-width: 365px) {
+  .theme-toggler {
+    top: 10px !important;
+    right: 10px !important;
+    margin: 0 !important;
+  }
   form {
     width: 90% !important;
   }
@@ -66,7 +71,7 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  margin: 1rem 3rem;
+  margin: 1rem 2rem;
 }
 
 .theme-toggler .light {
