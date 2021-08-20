@@ -28,6 +28,10 @@
     <form action="/send" method="post" spellcheck="false">
         <input type="tel" name="tel" id="tel" minlength="10" maxlength="10" pattern="[0][6-8][0-9]{8}" placeholder="Your Phone Number" oninvalid="inputError('#ED254E');" oninput="isValid()" required>
         <img src="/assets/loading.svg" class="loader" alt="loading icon">
+        <div class="responses-wrapper">
+            <img src="/assets/sms.svg" alt="a vector graphic sms" class="sms-icon icon" width="auto">
+            <p class="message"></p>
+        </div>
         <input type="submit" class="submit-btn" value="Go" disabled>
     </form>
 
