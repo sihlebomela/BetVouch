@@ -97,6 +97,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1rem;
+  margin-top: 5rem;
 }
 
 .main-text {
