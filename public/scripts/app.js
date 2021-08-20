@@ -44,7 +44,11 @@ function isValid() {
     console.log(number)
     if (number.match(numberPattern) != null && number.length === 10) {
         document.querySelector('#tel').style.borderColor = "#4ECB71";
+        document.querySelector('.submit-btn').removeAttribute('disabled');
     } else {
         document.querySelector('#tel').style.borderColor = "black";
+        document.querySelector('.submit-btn').setAttribute('disabled', '');
     }
 }
+
+isValid(); // call just-in-case the input was already filled
