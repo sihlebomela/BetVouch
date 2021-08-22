@@ -36,7 +36,11 @@ app.post('/send', (req, res) => {
                 })
                 .then(data => {
                     const AffiliateLink = data.AffiliateLink;
-                    const message = `BetVouch: Betway FREE Credit: Register at ${AffiliateLink} to receive your R30 Betway gaming Voucher. For queries contact sonke@tlcrewards.com Ts&Cs apply.`;
+                    const message = `BetVouch: Betway FREE Credit: Register at
+                    ${AffiliateLink} 
+                    to receive your R30 Betway gaming Voucher. 
+                    
+                    For queries contact sonke@tlcrewards.com Ts&Cs apply.`;
 
                     //! send sms to number with affiliate link
 
