@@ -59,8 +59,11 @@ app.post('/send', (req, res) => {
                     })
 
                 }).catch((err) => {
-                    console.log('unkown error occured', err);
-                    throw (new Error(err)) // throw error
+                    console.error('unkown error occured', err);
+                    res.status(500).json({
+                        message: 'error occured on our side please try again later...',
+                        status: 500 
+                    })
                 })
         } catch {
             return res.status(520).json({
