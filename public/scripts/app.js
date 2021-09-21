@@ -1,4 +1,5 @@
 const numberForm = document.querySelector('form');
+let errorElem = document.querySelector('.input-error');
 
 // Avoid redirecting
 numberForm.addEventListener('submit', (ev) => {
@@ -8,7 +9,8 @@ numberForm.addEventListener('submit', (ev) => {
     process();
 
     // send a post request
-    sendRequest(numberForm, '/send')
+    try {
+        sendRequest(numberForm, '/send')
         .then(res => {
             console.log(res);
             console.log(res.status)
@@ -23,7 +25,6 @@ numberForm.addEventListener('submit', (ev) => {
             } else if (res.status === 449) {
                 // number is invalid
                 backToDefault();
-                const errorElem = document.querySelector('.input-error');
                 errorElem.innerText = res.message;
                 inputError('#ED254E');
                 isValid();
@@ -33,6 +34,12 @@ numberForm.addEventListener('submit', (ev) => {
                 messageElem.innerText = res.message;
             }
         })
+    } catch {
+        //error occured
+        backToDefault();
+        numberForm.classList.add('failed');
+        errorElem = 'Oops! something is wrong on our side, please try again later';
+    }
 })
 
 async function sendRequest(formElem, route) {
